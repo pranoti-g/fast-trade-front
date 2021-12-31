@@ -19,8 +19,16 @@ th{
    margin-right: auto;
 }
 h1{
-    color: blue;
+    color: black;
 }
 a{
     color: black;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    margin-left: 90%;
+    margin-top: 0%;
+    top: 0pt;
+    right: 0pt;
 }

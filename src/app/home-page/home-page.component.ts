@@ -12,7 +12,10 @@ export class HomePageComponent implements OnInit {
  data:Observable<HomeClass[]>| any;
  symbol=[];
  price = [];
- count =5;
+ symbol1=[];
+ price1 = [];
+ cnt:number=0;
+ index:any;
   interval:any;
 
   constructor(
@@ -26,6 +29,13 @@ export class HomePageComponent implements OnInit {
         this.price=data[1];
         this.data=data;
       console.log(this.data[0]);
+      console.log(this.symbol.length);
+      if(this.symbol.length>5){
+        for(let i=0;i>5;i++){
+          this.symbol1=data[0]
+          this.price1=data[1];
+        }
+      }
     }  
     );
 
@@ -38,6 +48,14 @@ refresh(){
  this.data = this.homeService.getAllTrade();
         this.symbol=this.data[0]
         this.price=this.data[1];
+        this.index=this.symbol.length;
+        if(this.symbol.length>5){
+          for(let i=0;i>5;i++){
+            this.symbol1=this.data[0]
+            this.price1=this.data[1];
+            this.cnt++;
+          }
+        }
        
  
 }
@@ -45,6 +63,14 @@ refresh(){
  
   getDetails(symbol:string){
     this.router.navigate(['details',symbol]);
+  }
+
+  count(){
+if(this.cnt>5){
+  return true;
+}else{
+  return false;
+}
   }
 
   

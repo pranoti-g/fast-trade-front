@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HomeService } from '../service/home.service';
 
 @Component({
@@ -15,7 +15,8 @@ timestamp=[];
 interval :any;
 
   constructor(private _Activatedroute:ActivatedRoute,
-    private homeService:HomeService,) { }
+    private homeService:HomeService,
+    private router: Router,) { }
 
   ngOnInit(): void {
     this._Activatedroute.paramMap.subscribe(params => { 
@@ -35,6 +36,10 @@ interval :any;
       setInterval(function() { window.location.reload();}, 5000);
       
      // window.location.reload();
+  }
+
+  Back(){
+    this.router.navigate(['']);
   }
 
 }

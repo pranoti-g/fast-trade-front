@@ -2,6 +2,11 @@ body{
     text-align: center;
 }
 
+button{
+    top: 0pt;
+    margin-right: 90%;
+}
+
 table{
     text-align: center;
     align-items: center;
@@ -19,8 +24,14 @@ th{
    margin-right: auto;
 }
 h1{
-    color: blue;
+    color: black;
 }
 a{
     color: black;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    margin-left: 90%;
+    right: 0pt;
 }
