@@ -1,0 +1,56 @@
+
+<body>
+    <h1><strong>Fast Trade</strong></h1>
+    <br>
+    <table  class = "home" border="1">
+        <tbody style="width: 40%;">
+        <tr>
+        <th style="font-size: larger;width: 180px ;color: blue;background-color:rgb(214, 209, 209);">Stock Symbol</th>
+        <td style="width: 180px;">{{name}}</td>
+    </tr>    
+    <tr>
+        <th style="font-size: larger;width: 180px ;color: blue;background-color:rgb(214, 209, 209);">Current Price</th>
+        <td style="width: 180px;">{{price[4]}}</td>
+    </tr>    
+   </tbody>
+   </table>
+   <br><br>
+    <h1><strong>Last 5 Trade History</strong></h1>
+    <br><br>
+    <table  class = "home" border="1">
+    <tbody style="width: 40%;">
+    <tr>
+    <th style="font-size: larger;color: blue;background-color:rgb(214, 209, 209);">Stock Symbol</th>
+    <th style="font-size: larger;color: blue;background-color: rgb(214, 209, 209);text-align: right;">Trade Price</th>
+    <th style="font-size: larger;color: blue;background-color: rgb(214, 209, 209);text-align: right;">Trade Timestamp</th>
+    </tr>
+   <tr > 
+       <td style="text-align: left;">{{symbol[0]}}</td>
+       <td>{{price[0]}}</td>
+       <td>{{timestamp[0]}}</td>
+   </tr>
+   <tr > 
+    <td style="text-align: left;">{{symbol[1]}}</td>
+    <td>{{price[1]}}</td>
+    <td>{{timestamp[1]}}</td>
+</tr>
+<tr > 
+    <td style="text-align: left;">{{symbol[2]}}</td>
+    <td>{{price[2]}}</td>
+    <td>{{timestamp[2]}}</td>
+</tr>
+<tr > 
+    <td style="text-align: left;">{{symbol[3]}}</td>
+    <td>{{price[3]}}</td>
+    <td>{{timestamp[3]}}</td>
+</tr>
+<tr > 
+    <td style="text-align: left;">{{symbol[4]}}</td>
+    <td>{{price[4]}}</td>
+    <td>{{timestamp[4]}}</td>
+</tr>
+  
+    </tbody>
+    </table>
+  </body>
+  
