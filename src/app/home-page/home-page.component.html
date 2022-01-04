@@ -5,8 +5,8 @@
       
         <div class="logo">
         <img src="/assets/images/logo.png" height="60px" width="80px" alt="fast-trade">
-    </div>
-
+    </div><br>
+    <p>AZURE:East Asia</p>
     <h1><strong>Fast Trade</strong> 
    
     </h1>
@@ -18,8 +18,8 @@
     <table  class = "home" border="1">
     <tbody style="width: 40%;">
     <tr>
-    <th style="font-size: larger;color: black;background-color:rgb(184, 182, 182);">Stock Symbol</th>
-    <th style="font-size: larger;color: black;background-color: rgb(184, 182, 182);text-align: right;">Current Price (₹)</th>
+    <th style="font-size: larger;color: navy;background-color:white">Stock Symbol</th>
+    <th style="font-size: larger;color: navy;background-color: white;text-align: right;">Current Price (₹)</th>
     </tr>
     
 
@@ -50,7 +50,7 @@
 
 
              <tr *ngFor="let elements of symbol1  ; let i = index " >
-        <td (click)="getDetails(symbol[0])" style="font-weight: bold;text-align: left;">{{symbol1[i]}}</td>
+        <td (click)="getDetails(symbol[i])" style="font-weight: bold;text-align: left;">{{symbol1[i]}}</td>
         <td >{{price1[i]}}</td>
     </tr>
            

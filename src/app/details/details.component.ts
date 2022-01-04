@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { timer } from 'rxjs';
 import { HomeService } from '../service/home.service';
 
 @Component({
@@ -24,6 +25,7 @@ interval :any;
       
       });
       console.log(this.symbol);
+     timer(0,1000).subscribe(() =>{
       this.homeService.getDetails(this.name).subscribe(
         data =>{
           this.symbol=data[0];
@@ -32,8 +34,9 @@ interval :any;
          console.log(data);
         }
       );
+     })
 
-      setInterval(function() { window.location.reload();}, 5000);
+    //  setInterval(function() { window.location.reload();}, 5000);
       
      // window.location.reload();
   }

@@ -3,17 +3,18 @@
     <div class="logo">
         <img src="/assets/images/logo.png" height="60px" width="80px" alt="fast-trade">
     </div>  
+
     <button (click)="Back()" type="button" class="btn btn-outline-primary" >Back</button>
     <h1><strong>Fast Trade</strong></h1>
    
     <table  class = "home" border="1">
         <tbody style="width: 40%;">
         <tr>
-        <th style="font-size: larger;width: 180px ;color: black;background-color:rgb(214, 209, 209);">Stock Symbol</th>
+        <th style="font-size: larger;width: 180px ;color: navy;background-color:white;">Stock Symbol</th>
         <td style="width: 180px;">{{name}}</td>
     </tr>    
     <tr>
-        <th style="font-size: larger;width: 180px ;color: black;background-color:rgb(214, 209, 209);">Current Price</th>
+        <th style="font-size: larger;width: 180px ;color: navy;background-color:white;">Current Price</th>
         <td style="width: 180px;">{{price[0]}}</td>
     </tr>    
    </tbody>
@@ -24,9 +25,9 @@
     <table  class = "home" border="1">
     <tbody style="width: 40%;">
     <tr>
-    <th style="font-size: larger;color:black;background-color:rgb(214, 209, 209);">Stock Symbol</th>
-    <th style="font-size: larger;color: black;background-color: rgb(214, 209, 209);text-align: right;">Trade Price (₹)</th>
-    <th style="font-size: larger;color: black;background-color: rgb(214, 209, 209);text-align: right;">Trade Timestamp</th>
+    <th style="font-size: larger;color:navy;background-color:white;">Stock Symbol</th>
+    <th style="font-size: larger;color: navy;background-color: white;text-align: right;">Trade Price (₹)</th>
+    <th style="font-size: larger;color: navy;background-color: white;text-align: right;">Trade Timestamp</th>
     </tr>
    <tr > 
        <td style="text-align: left;">{{symbol[0]}}</td>

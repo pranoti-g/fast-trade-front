@@ -8,17 +8,20 @@ import { HttpClient } from '@angular/common/http';
 export class HomeService {
 
   constructor(private http: HttpClient) { }
-  baseUrl = "https://fast-trade.azurewebsites.net/  ";
-  url="";
+  baseUrl = "http://localhost:8080/";
+  url = "";
+
   getAllTrade():Observable<any>
   {
     this.url="https://fast-trade.azurewebsites.net/home";
+    //this.url="http://localhost:8080/home";
     return this.http.get(this.url);
   }
 
   getDetails(symbol:string):Observable<any>
   {
     this.url="https://fast-trade.azurewebsites.net/details?symbol="+symbol;
+    //this.url="http://localhost:8080/details?symbol="+symbol;
     return this.http.get(this.url);
   }
 }

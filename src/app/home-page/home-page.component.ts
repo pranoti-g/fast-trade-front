@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, timer } from 'rxjs';
 import { HomeService  } from '../../app/service/home.service';
 import { HomeClass } from '../home-class';
 @Component({
@@ -24,25 +24,28 @@ export class HomePageComponent implements OnInit {
   ) { }
  
   ngOnInit(): void {
-    this.homeService.getAllTrade().subscribe(
-      (data) =>{this.symbol=data[0]
-        this.price=data[1];
-        this.data=data;
-      console.log(this.data[0]);
-      console.log(this.symbol.length);
-      if(this.symbol.length>5){
-        for(let i=0;i>5;i++){
-          this.symbol1=data[0]
-          this.price1=data[1];
-        }
-      }
-    }  
-    );
-
-    setInterval(function(){
-    window.location.reload();
-    },5000);
-  }
+   timer(0,1000).subscribe(
+     ()=>{
+      this.homeService.getAllTrade().subscribe(
+        (data) =>{this.symbol=data[0]
+          this.price=data[1];
+          this.data=data;
+     
+          this.symbol1 =this.symbol.slice(5);
+          console.log(this.symbol1);
+  
+          this.price1 =this.price.slice(5);
+          console.log(this.price1);
+      
+      }  
+      );
+    
+     }
+   )
+  //   setInterval(function(){
+  //   window.location.reload();
+  //   },10000);
+   }
 
 refresh(){
  this.data = this.homeService.getAllTrade();
@@ -50,10 +53,13 @@ refresh(){
         this.price=this.data[1];
         this.index=this.symbol.length;
         if(this.symbol.length>5){
-          for(let i=0;i>5;i++){
-            this.symbol1=this.data[0]
-            this.price1=this.data[1];
-            this.cnt++;
+       
+          for(let i=5;i<=this.symbol.length;i++){
+            console.log("in the loop"+this.symbol[i]);
+            this.symbol1=this.symbol[i];
+            this.price1=this.price[i];
+            console.log(this.symbol1.length);
+         //   console.log(this.symbol1);
           }
         }
        
